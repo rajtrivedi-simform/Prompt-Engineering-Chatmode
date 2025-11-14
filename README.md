@@ -21,34 +21,34 @@ These rules are codified in the repository file:
 - `.github/copilot-instructions.md`
   - Purpose: workspace-level instructions for the chat agent. This file includes the agent behavior and output formatting rules for the Prompt-Engineering chat mode.
 
-## Configure at the workspace (repository) level
+# Configure the Prompt-Engineering chat mode:
 
-To make the repository provide the chat-mode instructions for all contributors who open it in a compatible Copilot/Chat integration, ensure the following:
+  ## Step's to setup:
 
-1. Add or update the file `.github/copilot-instructions.md` in the repository (this repo already contains it).
-   - Place the instruction document under the `.github/` folder so the agent and integrations that look for repo-scoped instructions can pick it up.
-2. Keep the instructions clear and focused (the current file in this repo is an example of a Prompt-Engineering policy). The file should state the role, required output structure, and interaction rules (for example: wait for explicit user confirmation before implementing).
-3. Commit and push the changes. When contributors open the repository in VS Code (or other supported editors that read repository instruction files), the Copilot/Chat integration will typically surface or honor the repo instructions.
+  **Note**: Make sure VSCode is updated to latest version in order to use the chatmode.
 
-Notes:
-- The exact behavior and how integrations honor `.github/copilot-instructions.md` depends on the editor and Copilot/Chat implementation/version. Treat the repository file as the canonical guidance for this project and keep it up to date.
+  1. Open copilot chat and in the chat window select `Configure Modes` option from mode selection drop-down.
+      - once you click on the chat mode a new modal would appear at the top center.
+      ![alt text](images/configure_modal.png)
 
-## Configure at the user (VS Code) level
+      - From the modal select `Create new custom chat mode file`. Once selected you would be given 2 option: `.github/chatmodes` and `User Data`. From this 2 options select `User Data`.
+      ![alt text](images/selection.png)
+      
+      - After Selecting the chatmode scope, you will be asked to name it `Prompt-Engineering` and a new file will be created.
 
-Users can control how Copilot/Chat behaves locally in two primary ways: adjusting VS Code settings (User or Workspace scope) and keeping repository instruction files (like `.github/copilot-instructions.md`) in the project.
 
-Recommended steps (UI):
+  2. After the file is created copy the contents from github repository and paste them in the chat-mode file. After saving the chat-mode will be visible in the mode selection drop-down of copilot chat.
 
-1. Open Visual Studio Code.
-2. Open Settings (File → Preferences → Settings or use the gear icon).
-3. Search for "Copilot" or "GitHub Copilot" in Settings.
-4. Review and set the extension options you want. You can choose whether Copilot is enabled globally (User) or only for the current workspace (Workspace) using the scope selector in the Settings UI.
+  3. Add a instructions file named `pe.instructions.md` in the `.github` folder of project and copy the contents of same from repository and paste them in the file.
 
-Alternative: edit `settings.json` (User or Workspace) via the command palette (`Preferences: Open Settings (JSON)`) and set Copilot-related preferences there. Use the Settings UI to discover the exact keys available in your installed Copilot/Chat extension version.
+  After following above steps you are ready to use the chat-mode.
 
-Tips:
-- Prefer leaving the workspace-level file (`.github/copilot-instructions.md`) in place: it gives consistent behaviour across contributors.
-- Use the Settings UI to change the enable/disable scope (User vs Workspace) so you control whether Copilot features apply to all projects or just this one.
+
+  **Note's:**
+
+  - During the prompt generation step make sure not to break the flow by editing the answers given to agent. Make sure to answer properly. 
+  - After the prompt is generated copy and paste the prompt to a new chat in agent mode. 
+
 
 ## Example workflow when using Prompt-Engineering chat mode
 

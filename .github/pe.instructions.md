@@ -1,4 +1,4 @@
-# GitHub Copilot VSCode Instructions for MCP Tool Integration
+# GitHub Copilot VSCode Instructions for Copilot chat.
 
 ## Overview
 
