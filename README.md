@@ -1,10 +1,10 @@
-# Prompt-Engineering Chat Mode (Repository)
+# Prompt-Engineering Agent (Repository)
 
-This repository contains a workspace-level instruction file that customizes the behavior of the Copilot/Chat agent when contributors use the "Prompt-Engineering" chat mode. The instructions shape how the agent formats outputs, what role it assumes, and what it does (or doesn't do) before receiving confirmation from the user.
+This repository contains a workspace-level instruction file that customizes the behavior of the Copilot/Chat agent when contributors use the "Prompt-Engineering" agent. The instructions shape how the agent formats outputs, what role it assumes, and what it does (or doesn't do) before receiving confirmation from the user.
 
-This README explains the chat mode, summarizes the repository-level instructions, and lists steps to configure the behavior both at the workspace (repository) level and at the user level in Visual Studio Code.
+This README explains the agent, summarizes the repository-level instructions, and lists steps to configure the behavior both at the workspace (repository) level and at the user level in Visual Studio Code.
 
-## What this chat mode does
+## What this Agent does
 
 - Role: The agent switches into a "Prompt Engineer" role and focuses on rewriting/optimizing user prompts.
 - Output format: The agent produces two sections on every iteration:
@@ -14,24 +14,24 @@ This README explains the chat mode, summarizes the repository-level instructions
 
 These rules are codified in the repository file:
 
-- `.github/copilot-instructions.md` — the file used by the workspace to instruct the agent about the Prompt-Engineering chat mode (already present in this repo).
+- `.github/copilot-instructions.md` — the file used by the workspace to instruct the agent about the Prompt-Engineering agent (already present in this repo).
 
 ## Files to inspect
 
 - `.github/copilot-instructions.md`
-  - Purpose: workspace-level instructions for the chat agent. This file includes the agent behavior and output formatting rules for the Prompt-Engineering chat mode.
+  - Purpose: workspace-level instructions for the chat agent. This file includes the agent behavior and output formatting rules for the Prompt-Engineering agent.
 
-# Configure the Prompt-Engineering chat mode:
+# Configure the Prompt-Engineering agent:
 
   ## Step's to setup:
 
   **Note**: Make sure VSCode is updated to latest version in order to use the chatmode.
 
   1. Open copilot chat and in the chat window select `Configure Modes` option from mode selection drop-down.
-      - once you click on the chat mode a new modal would appear at the top center.
+      - once you click on the agent a new modal would appear at the top center.
       ![alt text](images/configure_modal.png)
 
-      - From the modal select `Create new custom chat mode file`. Once selected you would be given 2 option: `.github/chatmodes` and `User Data`. From this 2 options select `User Data`.
+      - From the modal select `Create new custom agent`. Once selected you would be given 2 option: `.github/agents` and `User Data`. From this 2 options select `User Data`.
       ![alt text](images/selection.png)
       
       - After Selecting the chatmode scope, you will be asked to name it `Prompt-Engineering` and a new file will be created.
@@ -50,10 +50,10 @@ These rules are codified in the repository file:
   - After the prompt is generated copy and paste the prompt to a new chat in agent mode. 
 
 
-## Example workflow when using Prompt-Engineering chat mode
+## Example workflow when using Prompt-Engineering agent
 
 1. Open this repository in VS Code.
-2. Start a chat and switch to the "Prompt-Engineering" chat mode (if supported by your Copilot/Chat UI).
+2. Start a chat and switch to the "Prompt-Engineering" agent (if supported by your Copilot/Chat UI).
 3. The agent will adopt the Prompt Engineer role and return a Revised/Final Prompt (in a code block) plus any Clarification Questions.
 4. Review the revised prompt. If it looks good, confirm to the agent to continue or ask it to implement the prompt.
 
