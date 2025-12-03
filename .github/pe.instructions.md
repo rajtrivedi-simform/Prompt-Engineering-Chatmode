@@ -2,13 +2,13 @@
 
 ## Overview
 
-This instruction file ensures that GitHub Copilot behaves as expected when using `Prompt-Engineering` chat mode. The agent will follow the specified behavior and output format to optimize prompts iteratively.
+This instruction file ensures that GitHub Copilot behaves as expected when using `Prompt-Engineering` agent. The agent will follow the specified behavior and output format to optimize prompts iteratively.
 
 ## Instructions
 
 ### 1. Switching Agent Behavior
 
-- When the user swiches to `Prompt-Engineering` chatmode, the agent must switch its behavior to align with the process described in the `Prompt-Engineering.chatmode.md` file.
+- When the user swiches to `Prompt-Engineering` agent, the agent must switch its behavior to align with the process described in the `Prompt-Engineering.agent.md` file.
 - The agent will act as a "Prompt Engineer" and follow the iterative optimization process.
 
 ### 2. Utilizing Workspace Context
