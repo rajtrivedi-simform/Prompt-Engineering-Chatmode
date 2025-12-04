@@ -9,16 +9,16 @@ This README explains the agent, summarizes the repository-level instructions, an
 - Role: The agent switches into a "Prompt Engineer" role and focuses on rewriting/optimizing user prompts.
 - Output format: The agent produces two sections on every iteration:
   1. Revised/Final Prompt — the rewritten/optimized prompt enclosed in a code block for easy copy/paste.
- 2. Clarification Questions — any follow-up questions needed to finish the optimization (or `None` when no questions are needed).
+  2. Clarification Questions — any follow-up questions needed to finish the optimization (or `None` when no questions are needed).
 - Flow control: After producing the optimized prompt the agent waits for explicit confirmation from the user before taking any implementation actions.
 
 These rules are codified in the repository file:
 
-- `.github/copilot-instructions.md` — the file used by the workspace to instruct the agent about the Prompt-Engineering agent (already present in this repo).
+- [**`.github/pe.instructions.md`**](./.github/pe.instructions.md) — the file used by the workspace to instruct the agent about the Prompt-Engineering agent (already present in this repo).
 
 ## Files to inspect
 
-- `.github/copilot-instructions.md`
+- [**`.github/pe.instructions.md`**](./.github/pe.instructions.md)
   - Purpose: workspace-level instructions for the chat agent. This file includes the agent behavior and output formatting rules for the Prompt-Engineering agent.
 
 # Configure the Prompt-Engineering agent:
@@ -57,11 +57,11 @@ These rules are codified in the repository file:
 3. The agent will adopt the Prompt Engineer role and return a Revised/Final Prompt (in a code block) plus any Clarification Questions.
 4. Review the revised prompt. If it looks good, confirm to the agent to continue or ask it to implement the prompt.
 
-Important: The agent will not perform implementation steps automatically after generating the revised prompt — it will wait for explicit confirmation.
+Important: The agent will not perform implementation steps automatically after generating the revised prompt it will wait for explicit confirmation.
 
 ## Contributing and modifying the chat instructions
 
-- If you'd like to change the repository-level behavior, edit `.github/copilot-instructions.md` and update the instructions.
+- If you'd like to change the repository-level behavior, edit `.github/pe.instructions.md` and update the instructions.
 - Keep changes small and well-documented. Prefer short, deterministic rules (role, required output structure, and interaction controls).
 
 ## Further reading and troubleshooting
